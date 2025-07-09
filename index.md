@@ -53,6 +53,14 @@ For your first milestone, describe what your project is and how you plan to buil
 - Challenges you're facing and solving in your future milestones
 - What your plan is to complete your project
 
+# Starter Project
+
+Description: My starter project was the RGB slider. The RGB slider contains 3 lightbulbs within another. Whenever the user flicked a certain slider, the colored bulb the slider corresponded to increased its intesity. Additionally, it required me to solder on 29 joints to mend the pieces together. Soldering used a paintbrush like tool, which you had to hold like a pencil, and carefully melt soldering iron on the desired area. 
+
+Challenges: A challenge I faced was when I accidentally soldered 2 parts together. Due to how close the 2 areas were, the liquidated solder combined, and formed a singular ball. Luckily, there was a device that could suck all the liquid up, so I remelted the soldering iron, and used the device. Another problem that occured was that the wires were too long, and the scizzors wouldn't fit. Eventually, after a while, I was finally able to cut uneccessary pieces off. 
+
+Next Steps: My next steps are to build the self-driving car, and code it. The project I'm currently doing is the self-driving car, which requires me to build the shell, and code it to avoid obstacles. Building the shell would allow me to have something to test my code in, meaning that I can identify problems in my code, and in the shell. Additionally, I need to add modifications to my car. A few modifications I'm thinking about are to make it gesture controlled, have it jump, or give it a nitro booster. 
+
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
