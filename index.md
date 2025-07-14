@@ -42,18 +42,19 @@ For your second milestone, explain what you've worked on since your previous mil
 - What needs to be completed before your final milestone -->
 
 # First Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YdEHZaryFaI?si=4RKEKhnF_nQri2_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+How it works: I added different sensors which I would code in the future, such as the ultrasonic sensor, and the IR obstacle avoidance sensors. The ultrasonic sensor transmits an ultrasonic wave through one side which hits an object, eventually receiving the wave through the other side. It uses the amount of time it takes to receive the wave after transmitting it to measure the distance between itself and another object. On the other hand, instead of using an ultrasonic wave, the IR obstacle avoidance sensors use infrared light to measure its distance from an object. It sends an infrared ray which reflects off of an object and comes back to the receiver. If there is no object in front of it, the infrared ray wouldn't reflect off anything and would continue traveling. Additionally, the screw on the top of the sensors can be used to adjust its sensitivity. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+Description: For my first milestone, I started with the acrylic board first, adding motors, then wheels to it so I have a shell to test my code on. Next, I started wiring the car to the Arduino Uno board which would allow code to reach different components. Due to the lack of slots to fit each wire in on my Arduino Uno board, I needed to add a mini breadboard, so I could have each wire function properly. I've been able to connect the 5V and GND pin to the mini breadboard, so I could attach other wires to those pins. So far, I've made it move backward, forwards, and rotate in a constant loop. 
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+Challenges: A challenge I had was putting the wires together, as I've never really worked with wires before, so I kept on running out of place to put them, and almost made one of my IR obstacle avoidance sensors short circuit. During my first week here, I learned that I could set certain rows for 5V and GND pins by connecting them to the breadboard. As the two rows began filling up with wires, I connected those rows to a different spot on the breadboard, so I have enough space for all my wires. 
+
+Plan for the project: My plan for this project would be to finish coding the sensors, and begin making it remote controlled, or have it travel to a desired destination. 
 
 # Starter Project
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4H36yDGcPsc?si=E1qQTdqLzmyNdy_T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Description: My starter project was the RGB slider. The RGB slider contains 3 lightbulbs within another. Whenever the user flicked a certain slider, the colored bulb the slider corresponded to increased its intesity. Additionally, it required me to solder on 29 joints to mend the pieces together. Soldering used a paintbrush like tool, which you had to hold like a pencil, and carefully melt soldering iron on the desired area. 
 
@@ -80,13 +81,7 @@ void loop() {
 }
 ```
 
-```python
-def setup():
-  // setup code here
 
-def main():
-  // main code here
-```
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
