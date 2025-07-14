@@ -53,7 +53,8 @@ For my first milestone, I started with the acrylic board first, adding motors, t
 ### Challenges: 
 A challenge I had was putting the wires together, as I've never really worked with wires before, so I kept on running out of place to put them, and almost made one of my IR obstacle avoidance sensors short circuit. During my first week here, I learned that I could set certain rows for 5V and GND pins by connecting them to the breadboard. As the two rows began filling up with wires, I connected those rows to a different spot on the breadboard, so I have enough space for all my wires. 
 
-###Plan for the project###: My plan for this project would be to finish coding the sensors, and begin making it remote controlled, or have it travel to a desired destination. 
+### Plan for the project: 
+My plan for this project would be to finish coding the sensors, and begin making it remote controlled, or have it travel to a desired destination. 
 
 # Starter Project
 
