@@ -37,10 +37,10 @@ As said in the previous milestone, the IR obstacle avoidance sensors and ultraso
 
 As for the IR obstacle avoidance module sensors, I used code to set the pin values of the leftIR and rightIR to 7 and 8. Each sensor has 3 pins saying VCC(power), GND(ground), and OUT(output). The OUT pin is a digital output signal indicating whether an obstacle is detected or not. Therefore, I had to wire both sensor's OUT pins to their corresponding pins so the code could go to the correct modules. When the 2 sensors detected an object close to it, it made the wheel opposite of it spin backward making it turn away from the object. When both sensors were obstructed, the car moved backwards. 
 
-IR Obstacle Avoidace Module Schematic
+IR Obstacle Avoidace Module Schematic: 
 ![IR Obstacle Avoidance Module Schematic](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/01ceee8e1a5722c5cfd2b2f8a822e852ecea0c4d/IR%20Obstacle%20Avoidance%20Module%20schematic.jpg)
 
-Ultrasonic Module Schematic
+Ultrasonic Module Schematic: 
 ![Ultrasonic Module Schematic](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/034e55c0167eb9afb0b44b15ec4e64b73dbb8159/Ultrasonic%20Schematic.jpg)
 
 ### Description: 
@@ -89,55 +89,56 @@ My next steps are to build the self-driving car, and code it. The project I'm cu
 
 ### Milestone 2 Code
 ```c++
-#include <IRremote.h> //sets the code up
+#include <IRremote.h>
 
-const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
+const int IR_RECEIVE_PIN = 12;                                      // Define the pin number for the IR Sensor
 
-const int A_1B = 5; //sets motors to certain pins
+const int A_1B = 5;                                                 //sets motors to certain pins
 const int A_1A = 6;
 
 const int B_1B = 9;
 const int B_1A = 10;
 
-const int trigPin = 3; //the wire connecting to pin 3 
-const int echoPin = 4; //wire connecting to pin 4
+const int trigPin = 3;                                              //the wire connecting to pin 3 
+const int echoPin = 4;                                              //wire connecting to pin 4
 
-const int rightIR = 7; //code is transmitted to pin 7
-const int leftIR = 8; //code is transmitted to pin 8
+const int rightIR = 7;                                              //code is transmitted to pin 7
+const int leftIR = 8;                                               //code is transmitted to pin 8
 
-int speed = 150; //declares the speed variable
+int speed = 150;                                                    //declares the speed variable
 
 void setup() {
-Serial.begin(9600); //begins serial monitor
+  Serial.begin(9600);                                               //starts serial monitor
 
   //motor
-  pinMode(A_1B, OUTPUT); //sets the motors to outputs
+  pinMode(A_1B, OUTPUT);                                            //sets the motors to outputs
   pinMode(A_1A, OUTPUT);
   pinMode(B_1B, OUTPUT);
   pinMode(B_1A, OUTPUT);
 
   //IR remote
-  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
-  Serial.println("REMOTE CONTROL START"); //prints the string in the serial monitor
+  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);            // Start the IR receiver // Start the receiver
+  Serial.println("REMOTE CONTROL START");                           //prints the string in the serial monitor
 
     //ultrasonic
-  pinMode(echoPin, INPUT); //set echo pin as an input
-  pinMode(trigPin, OUTPUT); //set trigger pin as an output
+  pinMode(echoPin, INPUT);                                          //set echo pin as an input
+  pinMode(trigPin, OUTPUT);                                         //set trigger pin as an output
 
     //IR obstacle
-  pinMode(leftIR, INPUT); //sets the IR obstacle avoidance modules to inputs
+  pinMode(leftIR, INPUT);                                           //sets the IR obstacle avoidance modules to inputs
   pinMode(rightIR, INPUT);
 
 }
 
 void loop() {
-if (IrReceiver.decode()) { //checks if IR signal has been received and decoded
+
+  if (IrReceiver.decode()) {                                        //checks if IR signal has been received and decoded
     //    Serial.println(results.value,HEX);
-    String key = decodeKeyValue(IrReceiver.decodedIRData.command); //decodes the IR command and stores it in the key variable
-    if (key != "ERROR") { //checks if the signal is not an error
+    String key = decodeKeyValue(IrReceiver.decodedIRData.command);  //decodes the IR command and stores it in the key variable
+    if (key != "ERROR") {                                           //checks if the signal is not an error
       Serial.println(key);
 
-      if (key == "+") { //When a key is pressed on your remote control, the IR receiver will know what key is pressed, making the car move according to the corresponding key. 
+      if (key == "+") {                                             //When a key is pressed on your remote control, the IR receiver will know what key is pressed, making the car move according to the corresponding key. 
         speed += 50;
         Serial.print("Speed up");
         Serial.println ("");
@@ -187,41 +188,40 @@ if (IrReceiver.decode()) { //checks if IR signal has been received and decoded
 
       }
 
-      if (speed >= 255) { //sets max speed to 255
+      if (speed >= 255) {                                      //sets max speed to 255
         speed = 255;
       }
-      if (speed <= 0) { //sets minimum speed to 0
+      if (speed <= 0) {                                        //sets minimum speed to 0
         speed = 0;
       }
       delay(500);
       stopMove();
     }
 
-    IrReceiver.resume();  // Enable receiving of the next value
+    IrReceiver.resume();                                      // Enable receiving of the next value
   }
 
-  int left = digitalRead(leftIR);  // 0: Obstructed   1: Empty 
-  int right = digitalRead(rightIR); //the numbers above mean that if 0 is printed, there is an obstacle, otherwise, 1 is printed
+  int left = digitalRead(leftIR);                             // 0: Obstructed   1: Empty
+  int right = digitalRead(rightIR);                           //the numbers above mean that if 0 is printed, there is an obstacle, otherwise, 1 is printed
   
-  int speed = 150; //sets speed variable to 150
+  int speed = 150;
 
-  if (!left && right) { //if left is low, and if the right is empty, it would move to the right
+  if (!left && right) {                                      //if left is low, and if the right is empty, it would move to the right
     backLeft(speed);
-  } else if (left && !right) { //if left is empty and right isn't, move to left
+  } else if (left && !right) {                              //if left is empty and right isn't, move to left
     backRight(speed);
-  } else if (!left && !right) { //if both are empty, move backward
+  } else if (!left && !right) {                             //if both are empty, move backward
     moveBackward(speed);
     delay(1000);
   }
 
-
-  float distance = readSensorData(); //reads the distance and returns it, stores it in a variable called distance
+  float distance = readSensorData();                        //reads the distance and returns it, stores it in a variable called distance
   Serial.print (distance);
   delay(2000);
-  // if (distance > 25) { //if the distance is greater than 25 cm then move forward with a speed of 200
-  //   moveForward(200);
-  // }
-  if (distance < 10 && distance > 2) { //otherwise, if the distance is less than 10 and greater than 2: move backwards at a speed of 200
+                                                            // if (distance > 25) { //if the distance is greater than 25 cm then move forward with a speed of 200
+                                                            //   moveForward(200);
+                                                            // }
+  if (distance < 10 && distance > 2) {                      //otherwise, if the distance is less than 10 and greater than 2: move backwards at a speed of 200
     moveBackward(200);
   } else {
     stopMove();
@@ -229,13 +229,13 @@ if (IrReceiver.decode()) { //checks if IR signal has been received and decoded
 }
 
 float readSensorData() {
-  digitalWrite(trigPin, LOW); //turning sensor off for 2 microseconds
+  digitalWrite(trigPin, LOW);                               //turning sensor off for 2 microseconds
   delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH); //turning sensor on for 10 microseconds
+  digitalWrite(trigPin, HIGH);                              //turning sensor on for 10 microseconds
   delayMicroseconds(10);
-  // digitalWrite(trigPin, LOW); //turns sensor off 
-  float distance = pulseIn(echoPin, HIGH) / 58.00; //Equivalent to (340m/s*1us)/2
-  return distance; //reads echoPin and divides it by 58 before returning it
+  // digitalWrite(trigPin, LOW);                            //turns sensor off 
+  float distance = pulseIn(echoPin, HIGH) / 58.00;          //Equivalent to (340m/s*1us)/2
+  return distance;                                          //reads echoPin and divides it by 58 after returning it
 }
 
 void moveForward(int speed) {
@@ -302,7 +302,7 @@ void stopMove() {
 }
 
 
-String decodeKeyValue(long result) //if a certain button is pressed, it returns what button is pressed, and uses the code for the button
+String decodeKeyValue(long result)                         //if a certain button is pressed, it returns what button is pressed, and uses the code for the button
 {
   switch(result){
     case 0x16:
@@ -311,8 +311,8 @@ String decodeKeyValue(long result) //if a certain button is pressed, it returns 
       return "1"; 
     case 0x18:
       return "2"; 
-    case 0x5E:
-      return "3"; 
+    case 0x5E: 
+      return "3";
     case 0x8:
       return "4"; 
     case 0x1C:
@@ -352,8 +352,6 @@ String decodeKeyValue(long result) //if a certain button is pressed, it returns 
     default :
       return "ERROR";
     }
-}
-
 }
 
 ```
