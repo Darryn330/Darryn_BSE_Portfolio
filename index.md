@@ -37,8 +37,10 @@ As said in the previous milestone, the IR obstacle avoidance sensors and ultraso
 
 As for the IR obstacle avoidance module sensors, I used code to set the pin values of the leftIR and rightIR to 7 and 8. Each sensor has 3 pins saying VCC(power), GND(ground), and OUT(output). The OUT pin is a digital output signal indicating whether an obstacle is detected or not. Therefore, I had to wire both sensor's OUT pins to their corresponding pins so the code could go to the correct modules. When the 2 sensors detected an object close to it, it made the wheel opposite of it spin backward making it turn away from the object. When both sensors were obstructed, the car moved backwards. 
 
+IR Obstacle Avoidace Module Schematic
 ![IR Obstacle Avoidance Module Schematic](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/01ceee8e1a5722c5cfd2b2f8a822e852ecea0c4d/IR%20Obstacle%20Avoidance%20Module%20schematic.jpg)
 
+Ultrasonic Module Schematic
 ![Ultrasonic Module Schematic](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/034e55c0167eb9afb0b44b15ec4e64b73dbb8159/Ultrasonic%20Schematic.jpg)
 
 ### Description: 
@@ -84,8 +86,8 @@ My next steps are to build the self-driving car, and code it. The project I'm cu
 ![Schematics Image](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/ddcc68968a56fca457298615dc004e6c84094b03/Module%201%20screenshot.png)
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
+### Milestone 2 Code
 ```c++
 #include <IRremote.h> //sets the code up
 
@@ -352,6 +354,78 @@ String decodeKeyValue(long result) //if a certain button is pressed, it returns 
     }
 }
 
+}
+
+```
+### Milestone 1 Code
+```c++
+const int A_1B = 5; //set motors to certain pins
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
+
+void setup() {
+  pinMode(A_1B, OUTPUT); //set motors as outputs
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
+}
+
+void loop() { //makes it move in this pattern forever
+  moveForward();
+  delay(2000);
+  stopMove();
+  delay(500);
+
+  moveBackward();
+  delay(2000);
+  stopMove();
+  delay(500);
+
+  turnLeft();
+  delay(2000);
+  stopMove();
+  delay(500);
+
+  turnRight();
+  delay(2000);
+  stopMove();
+  delay(500);
+}
+
+void moveForward() {
+  digitalWrite(A_1B, LOW); //LOW turns something off
+  digitalWrite(A_1A, HIGH); //HIGH turns something on
+  digitalWrite(B_1B, HIGH);
+  digitalWrite(B_1A, LOW);
+}
+
+void moveBackward() {
+  digitalWrite(A_1B, HIGH);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, HIGH);
+}
+
+void turnRight() {
+  digitalWrite(A_1B, HIGH);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, HIGH);
+  digitalWrite(B_1A, LOW);
+}
+
+void turnLeft() {
+  digitalWrite(A_1B, LOW);
+  digitalWrite(A_1A, HIGH);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, HIGH);
+}
+
+void stopMove() {
+  digitalWrite(A_1B, LOW);
+  digitalWrite(A_1A, LOW);
+  digitalWrite(B_1B, LOW);
+  digitalWrite(B_1A, LOW);
 }
 ```
 
