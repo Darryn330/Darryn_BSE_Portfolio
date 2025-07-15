@@ -39,12 +39,16 @@ For your second milestone, explain what you've worked on since your previous mil
 - What needs to be completed before your final milestone -->
 
 ### How it works: 
+As said in the previous milestone, the IR obstacle avoidance sensors and ultrasonic sensor send a wave or ray in front of it, which bounces off an object is received by the sensor. This allows it to measure the distance between an object and itself. With these measurements, I was able to have the self driving car follow my hand. As long as it was within 5 inches from the sensor, it would receive the signal, and either move forward or stop. For example, if my hand were too close to the sensor, it wouldn't move, but if my hand stayed approximately 5 inches away from the sensor, it would continue following me. Another feature I added was the remote control. To begin using it, I first added the IR receiver to the breadboard and attatched it to pin 12 and VCC and GND so it would receive the remote controllers infrared signals. When a certain button was pressed, it would either stop, move, speed up, or slow down. 
 
 ### Description: 
+With the IR obstacle avoidance sensors and the ultrasonic sensor finally attatched and coded, I was able to get it to back away from objects whenever it sensed it. In the previous milestone, I hadn't yet added these sensors, so it would bump into everything when I tried to make it move. Now, I'm able to make it follow my hand, and back away from any obstacles in its way. Additionally, I was able to make the self-driving car use certain sensors and codes whenever the corresponding button was pressed. For example, if I pressed the EQ button on the remote controller, it would automatically switch to folowing my hand instead of following the remote controller which it uses by default. 
 
 ### Challenges: 
+It was challenging to put together code because I had several lines of code used for different functions on my car, and I had to take pieces out of each code and add it to button functions on the remote controller. Due to the movement codes clashing with one another, the car became confused from all the different directions it was receiving, so it didn't work. 
 
 ### Plan for the project: 
+My plan for the next milestone would be to make it gesture controlled, as I've always seen people using gesture controlled cars as a kid. I thought it was fascinating how they were able to control the movement of an object like it was an extension of themselves. 
 
 # First Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YdEHZaryFaI?si=4RKEKhnF_nQri2_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -76,7 +80,7 @@ My next steps are to build the self-driving car, and code it. The project I'm cu
 # Schematics
 
 ## Module 1 Schematic
-![Second schematics Image](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/f7c205628b4673da808fa458f409352989f14899/Module%202.png)
+![Second schematics Image](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/36eb88d8df319386fb23179b37f8a08217f09016/Module%202.png)
 ![Schematics Image](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/ddcc68968a56fca457298615dc004e6c84094b03/Module%201%20screenshot.png)
 
 # Code
