@@ -32,12 +32,6 @@ For your final milestone, explain the outcome of your project. Key details to in
 # Second Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yrKTVxtxmPo?si=Vk0Km7bvmR98Q2ed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone -->
-
 ### How it works: 
 As said in the previous milestone, the IR obstacle avoidance sensors and ultrasonic sensor send a wave or ray in front of it, which bounces off an object is received by the sensor. This allows it to measure the distance between an object and itself. With these measurements, I was able to have the self driving car follow my hand. As long as it was within 5 inches from the sensor, it would receive the signal, and either move forward or stop. For example, if my hand were too close to the sensor, it wouldn't move, but if my hand stayed approximately 5 inches away from the sensor, it would continue following me. Another feature I added was the remote control. To begin using it, I first added the IR receiver to the breadboard and attatched it to pin 12 and VCC and GND so it would receive the remote controllers infrared signals. When a certain button was pressed, it would either stop, move, speed up, or slow down. 
 
