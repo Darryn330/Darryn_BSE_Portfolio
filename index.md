@@ -357,19 +357,19 @@ String decodeKeyValue(long result)                         //if a certain button
 ```
 ### Milestone 1 Code
 ```c++
-const int A_1B = 5; //set motors to certain pins
+const int A_1B = 5;                   //set motors to certain pins
 const int A_1A = 6;
 const int B_1B = 9;
 const int B_1A = 10;
 
 void setup() {
-  pinMode(A_1B, OUTPUT); //set motors as outputs
+  pinMode(A_1B, OUTPUT);             //set motors as outputs
   pinMode(A_1A, OUTPUT);
   pinMode(B_1B, OUTPUT);
   pinMode(B_1A, OUTPUT);
 }
 
-void loop() { //makes it move in this pattern forever
+void loop() {                       //makes it move in this pattern forever
   moveForward();
   delay(2000);
   stopMove();
@@ -392,9 +392,9 @@ void loop() { //makes it move in this pattern forever
 }
 
 void moveForward() {
-  digitalWrite(A_1B, LOW); //LOW turns something off
-  digitalWrite(A_1A, HIGH); //HIGH turns something on
-  digitalWrite(B_1B, HIGH);
+  digitalWrite(A_1B, LOW);        //LOW turns something off
+  digitalWrite(A_1A, HIGH);       //HIGH turns something on
+  digitalWrite(B_1B, HIGH);  
   digitalWrite(B_1A, LOW);
 }
 
