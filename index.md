@@ -76,6 +76,8 @@ My next steps are to build the self-driving car, and code it. The project I'm cu
 ## Module 1 Schematic
 ![Second schematics Image](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/36eb88d8df319386fb23179b37f8a08217f09016/Module%202.png)
 ![Schematics Image](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/ddcc68968a56fca457298615dc004e6c84094b03/Module%201%20screenshot.png)
+![IR Obstacle Avoidance Module Schematic](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/01ceee8e1a5722c5cfd2b2f8a822e852ecea0c4d/IR%20Obstacle%20Avoidance%20Module%20schematic.jpg)
+
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
