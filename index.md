@@ -76,6 +76,7 @@ My next steps are to build the self-driving car, and code it. The project I'm cu
 # Schematics
 
 ## Module 1 Schematic
+![Second schematics Image](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/f7c205628b4673da808fa458f409352989f14899/Module%202.png)
 ![Schematics Image](https://github.com/Darryn330/Darryn_BSE_Portfolio/blob/ddcc68968a56fca457298615dc004e6c84094b03/Module%201%20screenshot.png)
 
 # Code
