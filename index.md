@@ -83,10 +83,10 @@ My next steps are to build the self-driving car, and code it. The project I'm cu
 
 ## Module 1 Schematic
 Schematic 2: 
-![Second schematics Image](Module 1 screenshot.png)
+![Second schematics Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/Module%201%20screenshot.png)
 
 Schematic 1:
-![Schematics Image](Module 2.png)
+![Schematics Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/Module%202.png)
 
 # Code
 
