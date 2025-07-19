@@ -1,5 +1,5 @@
 # BlueStamp Self Driving Car
-If you've ever seen 
+Recently, self-driving cars have moved from something coming from a futuristic timeline to real world testing. Vehicles such as Waymo have now become increasingly common in society, taking over the role of drivers. The project below showcases a simple way to build a self-driving car that allows the user to control it with a device, or have it avoid obstacles in its way. 
 
 ```HTML 
 <!--- This is an HTML comment in Markdown -->
