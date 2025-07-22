@@ -695,9 +695,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Arduino Uno R3 board | This item is used as a microcontroller meant to send code  | $Price | <https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Bluetooth Module | Connecting the hand-gesture tool I built to my car | $10.39 | <https://www.amazon.com/dp/B071YJG8DR?_encoding=UTF8&psc=1&ref=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&ref_=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&social_share=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47> Link </a> |
+| Arduino Uno R3 board | This item is used as a microcontroller meant to send code  | $29.00 | <https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/> Link </a> |
+| LIS3DH Three-Axis Accelerometer | Measuring the tilt of my hand | $4.95 | <https://www.amazon.com/Adafruit-LIS3DH-Triple-Axis-Accelerometer-ADA2809/dp/B01BU70B64> Link </a> |
+| HC05 Bluetooth Module | Connecting the hand-gesture tool I built to my car | $10.39 | <https://www.amazon.com/dp/B071YJG8DR?_encoding=UTF8&psc=1&ref=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&ref_=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&social_share=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47> Link </a> |
 
 # Other Resources/Examples
 - [Example 1](https://docs.sunfounder.com/projects/3in1-kit-v2/en/latest/car_project/car_assemble.html)
