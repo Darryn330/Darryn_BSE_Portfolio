@@ -96,7 +96,7 @@ Schematic 1:
 
 # Code
 ### Milestone 3 Code
-###### Master Module
+#### Master Module
 ```c++
 #include <SoftwareSerial.h>
 #include <Wire.h>
@@ -215,7 +215,7 @@ void loop() {
   }
 }
 ```
-###### Slave Module 
+#### Slave Module 
 ```c++
 #include <SoftwareSerial.h>
 
