@@ -96,8 +96,8 @@ Schematic 1:
 
 # Code
 ### Milestone 3 Code
-```c++
 ###### Master Module
+```c++
 #include <SoftwareSerial.h>
 #include <Wire.h>
 #include <SPI.h>
@@ -214,8 +214,9 @@ void loop() {
     delay(200);
   }
 }
-
+```
 ###### Slave Module 
+```c++
 #include <SoftwareSerial.h>
 
 const int A_1B = 5; 
