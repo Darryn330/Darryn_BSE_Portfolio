@@ -86,7 +86,7 @@ Finally, the last tool I used for my self driving car was a remote control. The 
 
 # Schematics
 Schematic 3:
-![Third shematics Image] (
+![Third shematics Image] (https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/Milestone%203.png)
 
 Schematic 2: 
 ![Second schematics Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/Module%202.png)
