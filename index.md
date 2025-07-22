@@ -1,5 +1,5 @@
 # BlueStamp Self Driving Car
-Recently, self-driving cars have moved from something coming from a futuristic timeline to real world testing. Vehicles such as Waymo have now become increasingly common in society, taking over the role of drivers. The project below showcases a simple way to build a self-driving car that allows the user to control it with a device, or have it avoid obstacles in its way. 
+Recently, self-driving cars have moved from something we believed would come far later in the future to something we see in our everyday lives. Vehicles such as Waymo have now become much more common in society, taking over the role of drivers. The project below showcases a way to build a self-driving car that allows the user to control it with a device, or have it avoid obstacles in its way. 
 
 ```HTML 
 <!--- This is an HTML comment in Markdown -->
@@ -20,12 +20,17 @@ Recently, self-driving cars have moved from something coming from a futuristic t
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE-->
+### Accomplishments: 
+From my previous milestone until now, I've spent several days working on a way to make my car gesture controlled. As a kid, I've always wanted a gesture controlled robot or car that I always saw online, or in stores. After using a remote to make my self-driving car move, I decided to move on to the next milestone which I was really excited to do. I began with making the accelerometer print its x, y, and z coordinates in the serial monitor which I eventually used to send forward, backward, left, and right to my self-driving car's Arduino. Before being able to do this, I had to pair my HC05 bluetooth modules so they could send code to one another. Afterwards, I sent the letters "F, B, L, R, and S" which corresponded to certain movements such as forwards and backwards. The self-driving car received these letters giving me the ability to make an if statement which uses the letters to figure out which way to move. 
 
+### Biggest Challenges And Triumphs:
+After finishing my last milestone, everything was going smoothly, until I ran into an issue involving an Arduino Nano. Originally, I was planning to pair the HC05 bluetooth modules together using an Arduino Nano, but it just wouldn't set both the modules to AT-mode. The Bluestamp counselors helped me switch it to another Nano, but that didn't work either, so I just worked on the accelerometer allowing me to save time. Eventually, I used an Arduino Uno to pair the HC05 modules, but then disaster struck again! The accelerometer I was working on for a while suddenly stopped working, and gave me several error messages. I swapped it several times, but it was useless, none of them gave me the outcome I wanted. Days passed, and I decided to give the accelerometer I started with another chance which led to success! It was giving me error messages the whole time, but now, it randomly started working when I uploaded my code. I felt pretty happy with my work, so after working a little longer the next day, I finally had myself a gesture controlled robot. 
+
+### Summary Of Important Learnings
+During my time at Bluestamp, I learned several things about coding, and engineering. I began without too much knowledge about electrical mechanics, but as I progressed, I learned that there were words like VCC and GND on certain pins which I could use to attatch wires to the correct places. Additionally, I learned that I could use one row on a breadboard for the power pin, ground pin or something else by attatching a wire to that row and putting multiple wires behind it. Without code, a machine would just be a hunk of materials, so it was a crucial part of my project. Overtime, I learned that the programming languages Arduino and Python were pretty similar. Using this, I integrated what I knew about Python to my Arduino code making it a lot easier. Moreover, throughout my time at Bluestamp, I was able to gain a lot of valuable experiences and knowledge which I can utilize in the future. 
+
+### What I Hope To Learn In The Future
+In the future, I hope to be able to make my own designs without any help. Seeing movies like Iron Man and Sonic the Hedgehog as a kid led me to have a passion for robots and code. Usually, I play building games that allow me to figure out how things like servos and hinges work. By using ideas from these games and movies, I plan to build myself something small that has several helpful functions in the future. 
 
 
 # Second Milestone
@@ -438,9 +443,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
+| Arduino Uno R3 board | This item is used as a microcontroller meant to send code  | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Bluetooth Module | Connecting the hand-gesture tool I built to my car | $10.39 | <https://www.amazon.com/dp/B071YJG8DR?_encoding=UTF8&psc=1&ref=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&ref_=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&social_share=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47> Link </a> |
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
