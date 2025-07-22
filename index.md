@@ -95,6 +95,256 @@ Schematic 1:
 ![Schematics Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/Module%201%20screenshot.png)
 
 # Code
+### Milestone 3 Code
+```c++
+###### Master Module
+#include <SoftwareSerial.h>
+#include <Wire.h>
+#include <SPI.h>
+#include <Adafruit_LSM6DS.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_LIS3DH.h>
+
+// Used for software SPI
+#define LIS3DH_CLK 13
+#define LIS3DH_MISO 12
+#define LIS3DH_MOSI 11
+// Used for hardware & software SPI
+#define LIS3DH_CS 10
+
+SoftwareSerial Master(2,3);
+
+Adafruit_LIS3DH lis = Adafruit_LIS3DH();
+
+void setup(void) {
+  Serial.begin(115200);
+  Master.begin(38400);
+  pinMode(3, OUTPUT);
+  pinMode(2, INPUT);
+
+  while (!Serial) delay(10);     // will pause Zero, Leonardo, etc until serial console opens
+
+  Serial.println("LIS3DH test!");
+
+  if (!lis.begin(0x18)) {   // change this to 0x19 for alternative i2c address
+    Serial.println("Couldnt start");
+    while (1) yield();
+  }
+  Serial.println("LIS3DH found!");
+
+  // lis.setRange(LIS3DH_RANGE_4_G);   // 2, 4, 8 or 16 G!
+
+  Serial.print("Range = "); Serial.print(2 << lis.getRange());
+  Serial.println("G");
+
+  // lis.setPerformanceMode(LIS3DH_MODE_LOW_POWER);
+  Serial.print("Performance mode set to: ");
+  switch (lis.getPerformanceMode()) {
+    case LIS3DH_MODE_NORMAL: Serial.println("Normal 10bit"); break;
+    case LIS3DH_MODE_LOW_POWER: Serial.println("Low Power 8bit"); break;
+    case LIS3DH_MODE_HIGH_RESOLUTION: Serial.println("High Resolution 12bit"); break; //break stops the code after it happens
+  }
+
+  // lis.setDataRate(LIS3DH_DATARATE_50_HZ);
+  Serial.print("Data rate set to: ");
+  switch (lis.getDataRate()) {
+    case LIS3DH_DATARATE_1_HZ: Serial.println("1 Hz"); break;
+    case LIS3DH_DATARATE_10_HZ: Serial.println("10 Hz"); break;
+    case LIS3DH_DATARATE_25_HZ: Serial.println("25 Hz"); break;
+    case LIS3DH_DATARATE_50_HZ: Serial.println("50 Hz"); break;
+    case LIS3DH_DATARATE_100_HZ: Serial.println("100 Hz"); break;
+    case LIS3DH_DATARATE_200_HZ: Serial.println("200 Hz"); break;
+    case LIS3DH_DATARATE_400_HZ: Serial.println("400 Hz"); break;
+
+    case LIS3DH_DATARATE_POWERDOWN: Serial.println("Powered Down"); break;
+    case LIS3DH_DATARATE_LOWPOWER_5KHZ: Serial.println("5 Khz Low Power"); break;
+    case LIS3DH_DATARATE_LOWPOWER_1K6HZ: Serial.println("1.6 Khz Low Power"); break;
+  }
+
+}
+
+void loop() {
+  // lis.read();      // get X Y and Z data at once
+  // // Then print out the raw data
+  // Serial.print("X:  "); Serial.print(lis.x);
+  // Serial.print("  \tY:  "); Serial.print(lis.y);
+  // Serial.print("  \tZ:  "); Serial.print(lis.z);
+
+  /* Or....get a new sensor event, normalized */
+  sensors_event_t event;
+  lis.getEvent(&event); //gives me numbers I need
+
+  /* Display the results (acceleration is measured in m/s^2) */
+  Serial.print("\t\tX: "); Serial.print(event.acceleration.x); //now that I have these numbers, I can use event.acceleration x/y/z
+  Serial.print(" \tY: "); Serial.print(event.acceleration.y);
+  Serial.print(" \tZ: "); Serial.print(event.acceleration.z);
+  Serial.println(" m/s^2 "); 
+
+  Serial.println();
+
+  delay(200);
+
+  if (event.acceleration.x <=-3 && event.acceleration.x >=-10) {
+    Serial.println ("Back");
+    Master.println ("B");
+    delay(200);
+  }
+
+  else if (event.acceleration.x >=3 && event.acceleration.x <=10) {
+    Serial.println ("Front");
+    Master.println ("F");
+    delay(200);
+  }
+
+  else if (event.acceleration.y <=-3 && event.acceleration.y >=-10)  {
+    Serial.println ("Right");
+    Master.println ("R");
+    delay(200);
+  }
+
+  else if (event.acceleration.y >=3 && event.acceleration.y <=10) {
+    Serial.println ("Left");
+    Master.println ("L");
+    delay(200);
+  }
+
+  else if (event.acceleration.x <=3 && event.acceleration.x >=-3 && event.acceleration.y <=3 && event.acceleration.y >=-3) {
+    Serial.println ("Stop");
+    Master.println ("S");
+    delay(200);
+  }
+}
+
+###### Slave Module 
+#include <SoftwareSerial.h>
+
+const int A_1B = 5; 
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
+
+int speed = (150);
+
+SoftwareSerial Slave(11,13);
+
+void setup() {
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
+
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+
+  Serial.begin(38400);
+  Slave.begin(38400);
+  pinMode(13, OUTPUT);
+  pinMode(11, INPUT);
+}
+
+void loop () {
+  Slave.println("Hello");
+  // delay(200);
+  if (Slave.available()) {
+    String receivedString = Slave.readStringUntil('\n'); // Read until a newline character
+    Serial.println("Received: ");
+    Serial.println(receivedString);
+  }
+
+  String receivedString = Slave.readStringUntil('\n');
+
+  if (receivedString.startsWith ("B")) {
+    moveBackward(speed);
+    delay(500);
+    stopMove();
+  }
+  if (receivedString.startsWith("F")) {
+    moveForward(speed);
+    delay(500);
+    stopMove();
+  }
+  if (receivedString.startsWith ("R")) {
+    turnRight(speed); 
+    delay(500);
+    stopMove();
+  }
+  if (receivedString.startsWith ("L")) {
+    turnLeft(speed); 
+    delay(500);
+    stopMove();
+  }
+
+  if (receivedString.startsWith ("S")) {
+    stopMove();
+  }
+}
+void moveForward(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void moveBackward(int speed) {
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void turnRight(int speed) {
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void turnLeft(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void moveLeft(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+void moveRight(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void backLeft(int speed) {
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+void backRight(int speed) {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void stopMove() {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+```
+
 
 ### Milestone 2 Code
 ```c++
