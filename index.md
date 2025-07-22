@@ -85,8 +85,9 @@ The line tracking sensor used infrared light to detect the contrast between the 
 Finally, the last tool I used for my self driving car was a remote control. The remote control uses an IR receiver to receive infrared transmissions from the remote controller. With 21 buttons on it, I was able to set different functions for each button. For example, the fast forward and rewind buttons activated the ultrasonic or IR obstacle avoidance sensors while the numbered buttons allowed me to control the direction it goes. 
 
 # Schematics
+Schematic 3:
+![Third shematics Image] (
 
-## Module 1 Schematic
 Schematic 2: 
 ![Second schematics Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/Module%202.png)
 
