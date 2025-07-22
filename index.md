@@ -12,7 +12,7 @@ Recently, self-driving cars have moved from something we believed would come far
 
 <!--**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
-![Headstone Image](logo.svg)
+![Headstone Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/20250722_160932.jpg)
   
 # Final Milestone
 
