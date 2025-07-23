@@ -451,29 +451,29 @@ void loop() {
 
       }
 
-      if (speed >= 255) {                                      //sets max speed to 255
+      if (speed >= 255) {                                    //sets max speed to 255
         speed = 255;
       }
-      if (speed <= 0) {                                        //sets minimum speed to 0
+      if (speed <= 0) {                                      //sets minimum speed to 0
         speed = 0;
       }
       delay(500);
       stopMove();
     }
 
-    IrReceiver.resume();                                      // Enable receiving of the next value
+    IrReceiver.resume();                                     // Enable receiving of the next value
   }
 
-  int left = digitalRead(leftIR);                             // 0: Obstructed   1: Empty
-  int right = digitalRead(rightIR);                           //the numbers above mean that if 0 is printed, there is an obstacle, otherwise, 1 is printed
+  int left = digitalRead(leftIR);                            // 0: Obstructed   1: Empty
+  int right = digitalRead(rightIR);                          //the numbers above mean that if 0 is printed, there is an obstacle, otherwise, 1 is printed
   
   int speed = 150;
 
   if (!left && right) {                                      //if left is low, and if the right is empty, it would move to the right
     backLeft(speed);
-  } else if (left && !right) {                              //if left is empty and right isn't, move to left
+  } else if (left && !right) {                               //if left is empty and right isn't, move to left
     backRight(speed);
-  } else if (!left && !right) {                             //if both are empty, move backward
+  } else if (!left && !right) {                              //if both are empty, move backward
     moveBackward(speed);
     delay(1000);
   }
@@ -565,7 +565,7 @@ void stopMove() {
 }
 
 
-String decodeKeyValue(long result)                         //if a certain button is pressed, it returns what button is pressed, and uses the code for the button
+String decodeKeyValue(long result)                             //if a certain button is pressed, it returns what button is pressed, and uses the code for the button
 {
   switch(result){
     case 0x16:
@@ -620,19 +620,19 @@ String decodeKeyValue(long result)                         //if a certain button
 ```
 ### Milestone 1 Code
 ```c++
-const int A_1B = 5;                   //set motors to certain pins
+const int A_1B = 5;                                       //set motors to certain pins
 const int A_1A = 6;
 const int B_1B = 9;
 const int B_1A = 10;
 
 void setup() {
-  pinMode(A_1B, OUTPUT);             //set motors as outputs
+  pinMode(A_1B, OUTPUT);                                  //set motors as outputs
   pinMode(A_1A, OUTPUT);
   pinMode(B_1B, OUTPUT);
   pinMode(B_1A, OUTPUT);
 }
 
-void loop() {                       //makes it move in this pattern forever
+void loop() {                                            //makes it move in this pattern forever
   moveForward();
   delay(2000);
   stopMove();
@@ -655,8 +655,8 @@ void loop() {                       //makes it move in this pattern forever
 }
 
 void moveForward() {
-  digitalWrite(A_1B, LOW);        //LOW turns something off
-  digitalWrite(A_1A, HIGH);       //HIGH turns something on
+  digitalWrite(A_1B, LOW);                            //LOW turns something off
+  digitalWrite(A_1A, HIGH);                           //HIGH turns something on
   digitalWrite(B_1B, HIGH);  
   digitalWrite(B_1A, LOW);
 }
