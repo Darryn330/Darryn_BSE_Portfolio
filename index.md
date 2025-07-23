@@ -1,16 +1,11 @@
 # BlueStamp Self Driving Car
 Recently, self-driving cars have moved from something we believed would come far later in the future to something we see in our everyday lives. Vehicles such as Waymo have now become much more common in society, taking over the role of drivers. The project below showcases a way to build a self-driving car that allows the user to control it with a device, or have it avoid obstacles in its way. 
 
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
 ```
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Darryn K | Lowell High School | Game Designer | Incoming Freshman
-
-<!--**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
 ![Headstone Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/20250722_160932.jpg)
   
@@ -122,23 +117,23 @@ void setup(void) {
   pinMode(3, OUTPUT);
   pinMode(2, INPUT);
 
-  while (!Serial) delay(10);     // will pause Zero, Leonardo, etc until serial console opens
+  while (!Serial) delay(10);                                        // will pause Zero, Leonardo, etc until serial console opens
 
   Serial.println("LIS3DH test!");
 
-  if (!lis.begin(0x18)) {   // change this to 0x19 for alternative i2c address
+  if (!lis.begin(0x18)) {                                           // if the i2c address is not 0x18, print couldn't start and stop the program otherwise, print "LIS3DH found!"
     Serial.println("Couldnt start");
     while (1) yield();
   }
   Serial.println("LIS3DH found!");
 
-  // lis.setRange(LIS3DH_RANGE_4_G);   // 2, 4, 8 or 16 G!
+  // lis.setRange(LIS3DH_RANGE_4_G);   
 
   Serial.print("Range = "); Serial.print(2 << lis.getRange());
   Serial.println("G");
 
   // lis.setPerformanceMode(LIS3DH_MODE_LOW_POWER);
-  Serial.print("Performance mode set to: ");
+  Serial.print("Performance mode set to: ");                         //sets the performance mode to the value in lis.getPerformanceMode()
   switch (lis.getPerformanceMode()) {
     case LIS3DH_MODE_NORMAL: Serial.println("Normal 10bit"); break;
     case LIS3DH_MODE_LOW_POWER: Serial.println("Low Power 8bit"); break;
@@ -146,7 +141,7 @@ void setup(void) {
   }
 
   // lis.setDataRate(LIS3DH_DATARATE_50_HZ);
-  Serial.print("Data rate set to: ");
+  Serial.print("Data rate set to: ");                                //sets the data rate to the value in lis.getDataRate()
   switch (lis.getDataRate()) {
     case LIS3DH_DATARATE_1_HZ: Serial.println("1 Hz"); break;
     case LIS3DH_DATARATE_10_HZ: Serial.println("10 Hz"); break;
@@ -175,7 +170,7 @@ void loop() {
   lis.getEvent(&event); //gives me numbers I need
 
   /* Display the results (acceleration is measured in m/s^2) */
-  Serial.print("\t\tX: "); Serial.print(event.acceleration.x); //now that I have these numbers, I can use event.acceleration x/y/z
+  Serial.print("\t\tX: "); Serial.print(event.acceleration.x);      //now that I have these numbers, I can use event.acceleration x/y/z
   Serial.print(" \tY: "); Serial.print(event.acceleration.y);
   Serial.print(" \tZ: "); Serial.print(event.acceleration.z);
   Serial.println(" m/s^2 "); 
@@ -184,7 +179,7 @@ void loop() {
 
   delay(200);
 
-  if (event.acceleration.x <=-3 && event.acceleration.x >=-10) {
+  if (event.acceleration.x <=-3 && event.acceleration.x >=-10) {     //if event.acceleration.x/y/z is greater than/less than/equal to a certain number, it will use that number to print something and move that direction.
     Serial.println ("Back");
     Master.println ("B");
     delay(200);
@@ -249,14 +244,14 @@ void loop () {
   Slave.println("Hello");
   // delay(200);
   if (Slave.available()) {
-    String receivedString = Slave.readStringUntil('\n'); // Read until a newline character
+    String receivedString = Slave.readStringUntil('\n');       // Read until a newline character
     Serial.println("Received: ");
     Serial.println(receivedString);
   }
 
   String receivedString = Slave.readStringUntil('\n');
 
-  if (receivedString.startsWith ("B")) {
+  if (receivedString.startsWith ("B")) {                       //if the code from my Master code sends these letters, it will move a certain direction
     moveBackward(speed);
     delay(500);
     stopMove();
