@@ -11,9 +11,7 @@ Recently, self-driving cars have moved from something we believed would come far
 ![Headstone Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/20250722_160932.jpg)
   
 # Final Milestone
-<!--**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jlC7yvA3m10?si=SwYJbej6exJsYQYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Accomplishments: 
 From my previous milestone until now, I've spent several days working on a way to make my car gesture controlled. As a kid, I've always wanted a gesture controlled robot or car that I always saw online, or in stores. After using a remote to make my self-driving car move, I decided to move on to the next milestone which I was really excited to do. I began with making the accelerometer print its x, y, and z coordinates in the serial monitor which I eventually used to send forward, backward, left, and right to my self-driving car's Arduino. Before being able to do this, I had to pair my HC05 bluetooth modules so they could send code to one another. Afterwards, I sent the letters "F, B, L, R, and S" which corresponded to certain movements such as forwards and backwards. The self-driving car received these letters giving me the ability to make an if statement which uses the letters to figure out which way to move. 
