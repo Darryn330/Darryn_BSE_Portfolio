@@ -693,6 +693,7 @@ void stopMove() {
 
 
 # Bill of Materials
+
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Sunfounder 3 in 1 kit | This contained all the parts I needed for my self-driving car  | $59.99 | <https://www.amazon.com/SunFounder-Compatible-Tutorials-Including-Controller/dp/B0B778L1DZ/ref=sr_1_1?crid=4P8ENG1Z0VZM&dib=eyJ2IjoiMSJ9.D9LrCZJnua_keVMLJz2FWuuxoH63mAxdEJdYQp8_ZhkffgQav9bKIiDykPzM-DaKg32tmb0-8dQPBeHf3i8n0LSYowfGyGMB8-0o-Y1OZwbH9Oof3n8ehJqtNngzSwWf4cBPpZ6fGnqHkCeovLMeMR75gFAXKC3zARKb_tdvSbQGA6ImIwT6Oc_PbJY-Ptzf3uFJ4Vt0tPYCclF9Qw35EIusUp1j8tFtJXoN6wiJL38.jzz8fJXbpzfY320r3XRqMHQbkOe_oHGwQE6r4AEvqiM&dib_tag=se&keywords=sunfounder+3+in+1+starter+kit+for+arduino+uno+r3&qid=1753302390&sprefix=sunfounder+3+in+1+star%2Caps%2C132&sr=8-1>  |
