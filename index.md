@@ -11,7 +11,6 @@ Recently, self-driving cars have moved from something we believed would come far
 ![Headstone Image](https://raw.githubusercontent.com/Darryn330/Darryn_BSE_Portfolio/refs/heads/gh-pages/20250722_160932.jpg)
   
 # Final Milestone
-
 <!--**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -694,9 +693,6 @@ void stopMove() {
 
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
-
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Sunfounder 3 in 1 kit | This contained all the parts I needed for my self-driving car  | $59.99 | <https://www.amazon.com/SunFounder-Compatible-Tutorials-Including-Controller/dp/B0B778L1DZ/ref=sr_1_1?crid=4P8ENG1Z0VZM&dib=eyJ2IjoiMSJ9.D9LrCZJnua_keVMLJz2FWuuxoH63mAxdEJdYQp8_ZhkffgQav9bKIiDykPzM-DaKg32tmb0-8dQPBeHf3i8n0LSYowfGyGMB8-0o-Y1OZwbH9Oof3n8ehJqtNngzSwWf4cBPpZ6fGnqHkCeovLMeMR75gFAXKC3zARKb_tdvSbQGA6ImIwT6Oc_PbJY-Ptzf3uFJ4Vt0tPYCclF9Qw35EIusUp1j8tFtJXoN6wiJL38.jzz8fJXbpzfY320r3XRqMHQbkOe_oHGwQE6r4AEvqiM&dib_tag=se&keywords=sunfounder+3+in+1+starter+kit+for+arduino+uno+r3&qid=1753302390&sprefix=sunfounder+3+in+1+star%2Caps%2C132&sr=8-1>  |
