@@ -27,6 +27,9 @@ During my time at Bluestamp, I learned several things about coding, and engineer
 ### What I Hope To Learn In The Future
 In the future, I hope to be able to make my own designs without any help. Seeing movies like Iron Man and Sonic the Hedgehog as a kid led me to have a passion for robots and code. Usually, I play building games that allow me to figure out how things like servos and hinges work. By using ideas from these games and movies, I plan to build myself something small that has several helpful functions in the future. 
 
+## Demo Of The Gesture Controlled Part
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rkpsjSegc0k?si=iIy3VLfyVGdtGUoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 # Second Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yrKTVxtxmPo?si=Vk0Km7bvmR98Q2ed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
