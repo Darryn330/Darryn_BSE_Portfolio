@@ -67,7 +67,7 @@ My next steps are to build the self-driving car, and code it. The project I'm cu
 
 # How it works: 
 
-### Overview
+### Overview Of Sensors
 I added different sensors such as the ultrasonic sensor and the IR obstacle avoidance sensors. The ultrasonic sensor transmits an ultrasonic wave through one side which hits an object, eventually receiving the wave through the other side. It uses the amount of time it takes to receive the wave after transmitting it to measure the distance between itself and another object. On the other hand, instead of using an ultrasonic wave, the IR obstacle avoidance sensors use infrared light to measure its distance from an object. It sends an infrared ray which reflects off of an object and comes back to the receiver. If there is no object in front of it, the infrared ray wouldn't reflect off anything and would continue traveling. Additionally, the screw on the top of the sensors can be used to adjust its sensitivity. (Refer to schematic 1 for a better idea of how it looks) 
 
 #### Ultrasonic Sensor
@@ -76,9 +76,17 @@ As said previously, the IR obstacle avoidance sensors and ultrasonic sensor send
 #### IR Obstacle Avoidance 
 As for the IR obstacle avoidance module sensors, I used code to set the pin values of the leftIR and rightIR to 7 and 8. Each sensor has 3 pins saying VCC(power), GND(ground), and OUT(output). The OUT pin is a digital output signal indicating whether an obstacle is detected or not. Therefore, I had to wire both sensor's OUT pins to their corresponding pins so the code could go to the correct modules. When the 2 sensors detected an object close to it, it made the wheel opposite of it spin backward making it turn away from the object. When both sensors were obstructed, the car moved backwards. 
 
+#### Line Tracking Sensor
 The line tracking sensor used infrared light to detect the contrast between the line and the area around it. It shoots out infrared light in front of it and uses the reflected light from the ground to see where the line is. Usually, a darker area would reflect less light, and a lighter background reflects more. Because lines are usually black, they would reflect less light, so the car would know exactly what to follow. 
 
+#### Remote Coontroller
 Finally, the last tool I used for my self driving car was a remote control. The remote control uses an IR receiver to receive infrared transmissions from the remote controller. With 21 buttons on it, I was able to set different functions for each button. For example, the fast forward and rewind buttons activated the ultrasonic or IR obstacle avoidance sensors while the numbered buttons allowed me to control the direction it goes. 
+
+#### HC05 Module
+The HC05 Module allows devices to communicate with each other via  bluetooth. You can configure it as either a Master or Slave device, the Master HC05 sending the signals to the Slave HC05. After receiving these signals, the Slave HC05 gives it to the microcontroller it's connected to allowing them to communicate efficiently. If you use a delay, the Slave HC05 may react to signals slower because it piles up over time, but the module can't carry out that many commands at the same time. 
+
+#### Accelerometer
+The accelerometer allows the user to measure the acceleration of itself when it's moving. Most accelerometers contain a small seismic mass which is suspended by springs or something similar. When accelerating, inertia causes the seismic mass to lag back a bit, causing these springs to stretch or compress, which it then converts into signals which it can send to my Arduino Uno board. 
 
 # Schematics
 Schematic 3:
