@@ -691,9 +691,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Sunfounder 3 in 1 kit | This contained all the parts I needed for my self-driving car  | $59.99 | <> Link </a> |
-| LIS3DH Three-Axis Accelerometer | Measuring the tilt of my hand | $4.95 | <https://www.amazon.com/Adhttps://www.amazon.com/SunFounder-Compatible-Tutorials-Including-Controller/dp/B0B778L1DZ/ref=sr_1_1?crid=4P8ENG1Z0VZM&dib=eyJ2IjoiMSJ9.D9LrCZJnua_keVMLJz2FWuuxoH63mAxdEJdYQp8_ZhkffgQav9bKIiDykPzM-DaKg32tmb0-8dQPBeHf3i8n0LSYowfGyGMB8-0o-Y1OZwbH9Oof3n8ehJqtNngzSwWf4cBPpZ6fGnqHkCeovLMeMR75gFAXKC3zARKb_tdvSbQGA6ImIwT6Oc_PbJY-Ptzf3uFJ4Vt0tPYCclF9Qw35EIusUp1j8tFtJXoN6wiJL38.jzz8fJXbpzfY320r3XRqMHQbkOe_oHGwQE6r4AEvqiM&dib_tag=se&keywords=sunfounder+3+in+1+starter+kit+for+arduino+uno+r3&qid=1753302390&sprefix=sunfounder+3+in+1+star%2Caps%2C132&sr=8-1afruit-LIS3DH-Triple-Axis-Accelerometer-ADA2809/dp/B01BU70B64> Link </a> |
-| HC05 Bluetooth Module | Connecting the hand-gesture tool I built to my car | $10.39 | <https://www.amazon.com/dp/B071YJG8DR?_encoding=UTF8&psc=1&ref=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&ref_=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&social_share=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47> Link </a> |
+| Sunfounder 3 in 1 kit | This contained all the parts I needed for my self-driving car  | $59.99 | <https://www.amazon.com/SunFounder-Compatible-Tutorials-Including-Controller/dp/B0B778L1DZ/ref=sr_1_1?crid=4P8ENG1Z0VZM&dib=eyJ2IjoiMSJ9.D9LrCZJnua_keVMLJz2FWuuxoH63mAxdEJdYQp8_ZhkffgQav9bKIiDykPzM-DaKg32tmb0-8dQPBeHf3i8n0LSYowfGyGMB8-0o-Y1OZwbH9Oof3n8ehJqtNngzSwWf4cBPpZ6fGnqHkCeovLMeMR75gFAXKC3zARKb_tdvSbQGA6ImIwT6Oc_PbJY-Ptzf3uFJ4Vt0tPYCclF9Qw35EIusUp1j8tFtJXoN6wiJL38.jzz8fJXbpzfY320r3XRqMHQbkOe_oHGwQE6r4AEvqiM&dib_tag=se&keywords=sunfounder+3+in+1+starter+kit+for+arduino+uno+r3&qid=1753302390&sprefix=sunfounder+3+in+1+star%2Caps%2C132&sr=8-1>  |
+| LIS3DH Three-Axis Accelerometer | Measuring the tilt of my hand | $4.95 | <https://www.amazon.com/Adafruit-LIS3DH-Triple-Axis-Accelerometer-ADA2809/dp/B01BU70B64> |
+| HC05 Bluetooth Module | Connecting the hand-gesture tool I built to my car | $10.39 | <https://www.amazon.com/dp/B071YJG8DR?_encoding=UTF8&psc=1&ref=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&ref_=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47&social_share=cm_sw_r_cp_ud_dp_N7DGQW3NX3DNB9EY2T47> |
 
 # Other Resources/Examples
 - [Self Driving car tutorial](https://docs.sunfounder.com/projects/3in1-kit-v2/en/latest/car_project/car_assemble.html)
