@@ -79,7 +79,7 @@ As for the IR obstacle avoidance module sensors, I used code to set the pin valu
 #### Line Tracking Sensor
 The line tracking sensor used infrared light to detect the contrast between the line and the area around it. It shoots out infrared light in front of it and uses the reflected light from the ground to see where the line is. Usually, a darker area would reflect less light, and a lighter background reflects more. Because lines are usually black, they would reflect less light, so the car would know exactly what to follow. 
 
-#### Remote Coontroller
+#### Remote Controller
 Finally, the last tool I used for my self driving car was a remote control. The remote control uses an IR receiver to receive infrared transmissions from the remote controller. With 21 buttons on it, I was able to set different functions for each button. For example, the fast forward and rewind buttons activated the ultrasonic or IR obstacle avoidance sensors while the numbered buttons allowed me to control the direction it goes. 
 
 #### HC05 Module
